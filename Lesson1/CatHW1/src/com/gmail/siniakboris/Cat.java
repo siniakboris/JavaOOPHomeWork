@@ -41,11 +41,11 @@ public class Cat {
 	}
 
 	public void sayMeah() {
-		System.out.println("Мяу-мяу");
+		System.out.println("РњСЏСѓ-РјСЏСѓ");
 	}
 
 	public void sayMur() {
-		System.out.println("Мур-мур");
+		System.out.println("РњСѓСЂ-РјСѓСЂ");
 	}
 
 	public double catEat() {
@@ -55,7 +55,7 @@ public class Cat {
 
 	@Override
 	public String toString() {
-		return "Cat [Имя=" + name + ", Цвет=" + color + ", Порода=" + type + ", Вес=" + weight + ", Возраст=" + age
+		return "Cat [РРјСЏ=" + name + ", Р¦РІРµС‚=" + color + ", РџРѕСЂРѕРґР°=" + type + ", Р’РµСЃ=" + weight + ", Р’РѕР·СЂР°СЃС‚=" + age
 				+ "]";
 	}
 
