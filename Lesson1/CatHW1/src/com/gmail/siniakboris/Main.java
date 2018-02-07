@@ -5,9 +5,9 @@ public class Main {
 	public static void main(String[] args) {
 
 		Cat catOne = new Cat();
-		catOne.setName("Фродо");
-		catOne.setColor("Коричневый");
-		catOne.setType("Бурмилла");
+		catOne.setName("Р¤СЂРѕРґРѕ");
+		catOne.setColor("РљРѕСЂРёС‡РЅРµРІС‹Р№");
+		catOne.setType("Р‘СѓСЂРјРёР»Р»Р°");
 		catOne.setWeight(3.5);
 		catOne.setAge(3);
 
@@ -15,9 +15,9 @@ public class Main {
 		System.out.println(catOne);
 
 		Cat catTwo = new Cat();
-		catTwo.setName("Гендальф");
-		catTwo.setColor("Белый");
-		catTwo.setType("Рэгдолл");
+		catTwo.setName("Р“РµРЅРґР°Р»СЊС„");
+		catTwo.setColor("Р‘РµР»С‹Р№");
+		catTwo.setType("Р СЌРіРґРѕР»Р»");
 		catTwo.setWeight(4.4);
 		catTwo.setAge(8);
 
