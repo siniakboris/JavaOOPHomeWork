@@ -12,6 +12,10 @@ public Triangle(double a, double b, double c) {
 	this.b = b;
 	this.c = c;
 }
+	
+public Triangle() {
+	super();
+}
 
 public double getA() {
 	return a;
