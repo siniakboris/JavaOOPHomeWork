@@ -51,10 +51,11 @@ public class Rectangle extends Shape {
 		this.d = d;
 	}
 	
+	@Override
 	public double getPerimetr() {
 		return a.getDistance(b) + a.getDistance(c) + c.getDistance(d) + b.getDistance(d);
 	}
-	
+	@Override
 	public double getArea() {
 		return a.getDistance(b) *  a.getDistance(c);
 	}
