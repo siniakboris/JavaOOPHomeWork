@@ -57,7 +57,9 @@ public class Rectangle extends Shape {
 	}
 	@Override
 	public double getArea() {
-		return a.getDistance(b) *  a.getDistance(c);
+		double p = (a.getDistance(b) + a.getDistance(c) + c.getDistance(d) + b.getDistance(d)) / 2;
+		double s = Math.sqrt((p - a.getDistance(b)) * (p - a.getDistance(c)) * (p - c.getDistance(d)) * ( p -  b.getDistance(d)));
+		return s;
 	}
 
 	@Override
