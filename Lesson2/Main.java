@@ -8,12 +8,6 @@ public class Main {
 		Point pointTwo = new Point(8, 4);
 		Point pointThree = new Point(10, 4);
 		Point pointFour = new Point(12, 2);
-
-		System.out.println("Точки:");
-		System.out.println("Расстояние 1 = " + pointOne.getDistance(pointTwo));
-		System.out.println("Расстояние 2 = " + pointOne.getDistance(pointThree));
-		System.out.println("Расстояние 3 = " + pointTwo.getDistance(pointFour));
-		System.out.println("Расстояние 4 = " + pointThree.getDistance(pointFour));
 		
 		System.out.println();
 
