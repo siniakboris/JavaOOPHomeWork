@@ -34,10 +34,8 @@ public class Square extends Shape {
 	public double getArea() {
 		return Math.pow(a.getDistance(b), 2) / 2;
 	}
-	
-	@Override
-	public double getSide() {
 
+	public double getSide() {
 		return Math.sqrt(getArea());
 	}
 	
