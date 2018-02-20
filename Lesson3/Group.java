@@ -1,7 +1,5 @@
 package com.gmail.siniakboris;
 
-import java.util.Arrays;
-
 public class Group {
 
 	private Student[] Group = new Student[10];
@@ -24,28 +22,27 @@ public class Group {
 		Group = group;
 	}
 
-	public int numberOfStudents(Student[] group) {
+	public int numberOfStudents() {
 		int number = 0;
-		for (int i = 0; i < group.length; i++) {
-			if (group[i] != null) {
+		for (int i = 0; i < Group.length; i++) {
+			if (Group[i] != null) {
 				number = number + 1;
-				break;
 			}
 		}
 		return number;
 	}
 
 	public void addStudent(Student st) throws MyException {
-		if (this.numberOfStudents(Group) <= 10) {
+		if (st != null) {
 			for (int i = 0; i < Group.length; i++) {
 				if (Group[i] == null) {
 					Group[i] = st;
-					break;
+					return;
 				}
 			}
-		} else {
 			throw new MyException();
 		}
+
 	}
 
 	public void deleteStudent(int a) {
@@ -69,9 +66,14 @@ public class Group {
 
 	}
 
-	@Override
-	public String toString() {
-		return "Группа = " + Arrays.toString(Group);
+	public void toPrintGroup() {
+		for (int i = 0; i < Group.length; i++) {
+			if (Group[i] != null) {
+				System.out.println("Номер зачетки: " + Group[i].getNumber() + ", имя студента: " + Group[i].getName()
+						+ ", возраст: " + Group[i].getAge() + ", пол: " + Group[i].getSex());
+			}
+		}
+
 	}
 
 }
