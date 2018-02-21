@@ -33,9 +33,8 @@ public class Group {
 	}
 
 	public void addStudent(Student st) throws MyException {
-		
 		if (st == null) {
-			throw new IllegalArgumentException("Null student");
+			throw new IllegalArgumentException("Студент не найден");
 		}
 		for (int i = 0; i < group.length; i++) {
 			if (group[i] == null) {
@@ -75,7 +74,5 @@ public class Group {
 						+ ", возраст: " + group[i].getAge() + ", пол: " + group[i].getSex());
 			}
 		}
-
 	}
-
 }
