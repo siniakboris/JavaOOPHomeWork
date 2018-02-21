@@ -47,9 +47,9 @@ public class Group {
 	}
 
 	public void deleteStudent(int a) {
-		for (int j = 0; j < group.length; j++) {
-			if (group[j] != null && group[j].getNumber() == a) {
-				group[j] = null;
+		for (int i = 0; i < group.length; i++) {
+			if (group[i] != null && group[i].getNumber() == a) {
+				group[i] = null;
 				break;
 			}
 
@@ -58,9 +58,9 @@ public class Group {
 	}
 
 	public Student searchStudent(String name) {
-		for (int k = 0; k < group.length; k++) {
-			if (group[k] != null && group[k].getName().equals(name)) {
-				return group[k];
+		for (int i = 0; i < group.length; i++) {
+			if (group[i] != null && group[i].getName().equals(name)) {
+				return group[i];
 			}
 		}
 		return null;
