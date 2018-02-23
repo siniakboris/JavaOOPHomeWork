@@ -3,7 +3,7 @@ package com.gmail.siniakboris;
 import java.util.Arrays;
 import java.util.Scanner;
 
-public class Group {
+public class Group implements Voenkom {
 
 	private Student[] group = new Student[10];
 
@@ -56,9 +56,18 @@ public class Group {
 		Arrays.sort(group, (a, b) -> NullCheck.checkNull(a, b) == NullCheck.NOT_NULL ? a.getName().compareTo(b.getName()) 
 				: NullCheck.checkNull(a, b));
 	}
-	
-	
-	
+
+	@Override
+	public Student[] voenkomSort() {
+			Student[] recruts = new Student[10];
+			for (int i = 0; i < group.length; i++) {
+				if (group[i] != null && group[i].getAge() >= 18 && group[i].getSex() == "мужской") {
+					recruts[i] = group[i];
+				}
+			}
+		return recruts;
+	}
+
 	public void addStudent(Student st) throws MyException {
 		if (st == null) {
 			throw new IllegalArgumentException("Студент не найден");
