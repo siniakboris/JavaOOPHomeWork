@@ -25,7 +25,7 @@ public class Group implements Voenkom {
 		this.group = group;
 	}
 	
-	public void addStudentManual() throws MyException {
+public void addStudentManual() throws MyException {
 		
 		Student st = new Student ("имя", 0, "пол", 0);
 		Scanner sc = new Scanner(System.in);  
@@ -34,13 +34,15 @@ public class Group implements Voenkom {
 		st.setName(sc.nextLine());
 		System.out.println("Введите возраст:");
 		st.setAge(sc.nextInt());
+		sc.nextLine();
 		System.out.println("Введите пол:");
-		st.setSex(sc.next());
+		st.setSex(sc.nextLine());
 		System.out.println("Введите номер зачетки:");
 		st.setNumber(sc.nextInt());
 		
-		if (st.getAge() < 0 && st.getNumber() < 0) {
-			System.out.println("Ошибка, введены не коректные числовые значения");
+		if (st.getAge() < 0 || st.getNumber() < 0 || st.getName() == null) {
+			System.out.println("Ошибка ввода данных. Студент не добавлен");
+			st = null;
 		}
 		
 		for (int i = 0; i < group.length; i++) {
@@ -59,10 +61,20 @@ public class Group implements Voenkom {
 
 	@Override
 	public Student[] voenkomSort() {
-			Student[] recruts = new Student[10];
+		int numberRecruts = 0;
+		
+		for (int j = 0; j < group.length; j++) {
+			if (group[j] != null && group[j].getAge() >= 18 && group[j].getSex() == "мужской") {
+				numberRecruts = numberRecruts + 1;
+			}
+		}
+		
+			Student[] recruts = new Student[numberRecruts];
+			int number = 0;
 			for (int i = 0; i < group.length; i++) {
 				if (group[i] != null && group[i].getAge() >= 18 && group[i].getSex() == "мужской") {
-					recruts[i] = group[i];
+					recruts[number] = group[i];
+					number = number + 1;
 				}
 			}
 		return recruts;
@@ -110,7 +122,5 @@ public class Group implements Voenkom {
 						+ ", возраст: " + group[i].getAge() + ", пол: " + group[i].getSex());
 			}
 		}
-
 	}
-
 }
