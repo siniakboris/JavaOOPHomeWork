@@ -9,6 +9,7 @@ public class Main {
 		Student Lena = new Student ("Лена", 20, "женский", 2);
 		Student Anna = new Student ("Аня", 18, "женский", 2);
 		Student Bogdan = new Student ("Богдан", 19, "мужской", 2);
+		Student Victor = new Student ("Виктор", 25, "мужской", 2);
 		
 		Group groupOne = new Group();
 			
@@ -16,11 +17,13 @@ public class Main {
 		System.out.println("Cостав группы:");
 
 		try {
-		//groupOne.addStudentManual();
+		
+		groupOne.addStudentManual();
 		groupOne.addStudent(Ivan);
 		groupOne.addStudent(Lena);
 		groupOne.addStudent(Anna);
 		groupOne.addStudent(Bogdan);
+		groupOne.addStudent(Victor);
 
 		} catch (MyException e) {
 			System.out.println(e.toString());
