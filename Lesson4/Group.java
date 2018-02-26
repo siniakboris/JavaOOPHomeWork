@@ -64,7 +64,7 @@ public void addStudentManual() throws MyException {
 		int numberRecruts = 0;
 		
 		for (int j = 0; j < group.length; j++) {
-			if (group[j] != null && group[j].getAge() >= 18 && group[j].getSex() == "мужской") {
+			if (group[j] != null && group[j].getAge() >= 18 && group[j].getSex().equals("мужской")) {
 				numberRecruts = numberRecruts + 1;
 			}
 		}
@@ -72,7 +72,7 @@ public void addStudentManual() throws MyException {
 			Student[] recruts = new Student[numberRecruts];
 			int number = 0;
 			for (int i = 0; i < group.length; i++) {
-				if (group[i] != null && group[i].getAge() >= 18 && group[i].getSex() == "мужской") {
+				if (group[i] != null && group[i].getAge() >= 18 && group[i].getSex().equals("мужской")) {
 					recruts[number] = group[i];
 					number = number + 1;
 				}
@@ -122,5 +122,7 @@ public void addStudentManual() throws MyException {
 						+ ", возраст: " + group[i].getAge() + ", пол: " + group[i].getSex());
 			}
 		}
+
 	}
+
 }
