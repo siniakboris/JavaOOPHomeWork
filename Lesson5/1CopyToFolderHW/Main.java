@@ -19,7 +19,7 @@ public class Main {
 
 		try {
 			for (File file : fileList) {
-				CopyFiles.copyFiles(file, new File("D://TwoFolder/" + file.getName()));
+				CopyFiles.copyFiles(file, new File(myTwoFolder + "/" + file.getName()));
 			}
 		} catch (IOException e) {
 			e.printStackTrace();
