@@ -12,7 +12,7 @@ public class CopyFiles {
 public static void copyFiles(File in, File out) throws IOException {
 		
 		if (in == null || out == null) {
-			throw new IllegalArgumentException("Файл отстутствует");
+			throw new IllegalArgumentException("Файл отсутствует");
 		}
 		try(InputStream is = new FileInputStream(in);
 				OutputStream os = new FileOutputStream(out)) {
