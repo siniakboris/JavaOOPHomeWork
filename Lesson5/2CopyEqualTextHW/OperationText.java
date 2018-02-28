@@ -19,10 +19,9 @@ public class OperationText {
 
 				for (; (text = br.readLine()) != null;) {
 					stringResult = stringResult + text;
+					String[] result = stringResult.split("[ -,.!?\\s]+");
+					return result;
 				}
-
-				String[] result = stringResult.split("[ -,.!?\\s]+");
-				return result;
 
 			} catch (IOException e) {
 				e.printStackTrace();
