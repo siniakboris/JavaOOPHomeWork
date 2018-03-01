@@ -23,7 +23,9 @@ public class Factorial implements Runnable {
 	public void run() {
 		Thread th = Thread.currentThread();
 		for (int i = 1; i <= number; i++) {
-			System.out.println(th.getName() + " " + caclucateFactorial(number));
-		}	
+			System.out.println(th.getName() + " " + caclucateFactorial(i));
+		}
+		
 	}	
+	
 }
