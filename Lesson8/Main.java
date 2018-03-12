@@ -52,7 +52,6 @@ public class Main {
 	}
 
 	public static void loadGroupFromFile(Group group, File file) {
-
 		Scanner scLoad = new Scanner(System.in);
 		System.out.println();
 		System.out.println("Нужно считать записаный файл файл? Введите 1 для выполнения.");
